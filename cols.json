@@ -1,0 +1,20 @@
+{
+  "text": {
+    "cols": [
+      "clean_text"
+    ],
+    "type": "TfidfVectorizer"
+  },
+  "num": {
+    "cols": [
+      "length",
+      "num_digits",
+      "num_exclaim",
+      "num_upper",
+      "num_urls",
+      "keyword_score",
+      "phishing_pattern"
+    ],
+    "type": "StandardScaler"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "steps": [
+    {
+      "name": "preprocessor",
+      "type": "ColumnTransformer",
+      "transformers": [
+        {
+          "name": "text",
+          "cols": "clean_text",
+          "type": "TfidfVectorizer"
+        },
+        {
+          "name": "num",
+          "cols": [
+            "length",
+            "num_digits",
+            "num_exclaim",
+            "num_upper",
+            "num_urls",
+            "keyword_score",
+            "phishing_pattern"
+          ],
+          "type": "StandardScaler"
+        }
+      ]
+    },
+    {
+      "name": "classifier",
+      "type": "VotingClassifier",
+      "estimators": [
+        "LogisticRegression",
+        "CalibratedClassifierCV"
+      ]
+    }
+  ],
+  "all_expected_columns": [
+    "clean_text",
+    "length",
+    "num_digits",
+    "num_exclaim",
+    "num_upper",
+    "num_urls",
+    "keyword_score",
+    "phishing_pattern"
+  ]
+}
