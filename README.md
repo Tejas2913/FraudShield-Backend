@@ -2,7 +2,7 @@
 
 FraudShield AI is a Real-Time Digital Scam Detection & Awareness Platform built using a full-stack architecture and a machine learning pipeline. The system consists of three main components: a FastAPI backend, a React frontend, and a research repository containing model training and experimentation notebooks.
 
-================================================================================
+
 
 # FraudShield AI – Backend
 
@@ -36,6 +36,7 @@ https://fraudshield-backend-6.onrender.com/docs
 - Render (Deployment)
 
 ## Project Structure
+```
 app/
 ├── database/
 ├── routes/
@@ -45,6 +46,7 @@ app/
 │   └── model.pkl
 main.py
 requirements.txt
+```
 
 ## Authentication Endpoints
 - POST /auth/signup
@@ -67,13 +69,17 @@ JWT tokens are issued during signup and login.
 - ACCESS_TOKEN_EXPIRE_MINUTES=60
 
 ## Local Development
-- pip install -r requirements.txt
-- uvicorn main:app --reload
-
+```
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 ## Production Deployment
 ### Build Command:
-- pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 ### Start Command:
-- gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
-
+```
+gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
+```
