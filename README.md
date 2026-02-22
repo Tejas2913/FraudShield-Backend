@@ -61,19 +61,19 @@ JWT tokens are issued during signup and login.
 - Used for scam detection via prediction endpoints
 
 ## Environment Variables
-DATABASE_URL=sqlite:///./fraudshield.db
-SECRET_KEY=your_secret_key
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=60
+- DATABASE_URL=sqlite:///./fraudshield.db
+- SECRET_KEY=your_secret_key
+- ALGORITHM=HS256
+- ACCESS_TOKEN_EXPIRE_MINUTES=60
 
 ## Local Development
-pip install -r requirements.txt
-uvicorn main:app --reload
+- pip install -r requirements.txt
+- uvicorn main:app --reload
 
 ## Production Deployment
-Build Command:
-pip install -r requirements.txt
+### Build Command:
+- pip install -r requirements.txt
 
-Start Command:
-gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
+### Start Command:
+- gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
 
