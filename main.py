@@ -26,7 +26,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://fraud-shield-frontend-w549.vercel.app/",
+        "https://fraud-shield-frontend-w549.vercel.app",
         
         "http://localhost:5173",
         "http://localhost:5174",
